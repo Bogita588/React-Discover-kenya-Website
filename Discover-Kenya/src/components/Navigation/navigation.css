@@ -1,0 +1,110 @@
+/* navigation.css */
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #007BFF;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style the navigation links */
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  /* Style the links */
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #0056b3;
+  }
+  
+  /* Style the logo */
+  .logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Style the mobile menu */
+  .kws__navbar-smallscreen {
+    display: none;
+    align-items: center;
+  }
+  
+  /* Style the mobile menu icon */
+  .kws__navbar-smallscreen svg {
+    cursor: pointer;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .nav-list {
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #007BFF;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: -1;
+    }
+  
+    .nav-list.mobile-menu-open {
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 1;
+    }
+  
+    .nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .kws__navbar-smallscreen {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    /* Style mobile menu links */
+    .kws__navbar-smallscreen-links {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .k__nav1 {
+      margin: 5px 0;
+    }
+  
+    /* Style the close icon in the mobile menu */
+    .overlay__close {
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  

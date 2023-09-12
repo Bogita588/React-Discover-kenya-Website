@@ -1,97 +1,74 @@
-// NavigationBar.js
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './navigation.css'; // Import the CSS file
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdOutlineRestaurantMenu } from 'react-icons/md';
 
-const Navigation = () => {
+
+      import React, { useState } from 'react'
+
+import './navigation.css'
+
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+
+ const Menu = () => (
+  <>
+
+      <p><a href="#home">Home</a></p>
+      <p><a href="#Innovations">Our Mission</a></p>
+      <p><a href="#about">About</a></p>
+      <p><a href="#Internships">Services</a></p>
+      <p><a href="#contact">Contact</a></p>
+      <p><a href="#faq">FAQ</a></p>
+      <p><a href="#search">Search</a></p>
+      <p><a href="#footer">Footer</a></p>
+
+      
+  
+          
+  </>
+ )
+
+ const Navigation = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  // Function to handle the click on the mobile menu icon
-  const handleMobileMenuClick = () => {
-    setToggleMenu(!toggleMenu);
-  };
-
   return (
-    <nav className="navbar">
-      <Link to="/" className="logo">
-        Your Logo
-      </Link>
-      <ul className={`nav-list ${toggleMenu ? 'mobile-menu-open' : ''}`}>
-        <li className="nav-item">
-          <Link to="/" className="nav-link">
-            Discover
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/search" className="nav-link">
-            Search
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/counties" className="nav-link">
-            Counties & Towns
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/cntyservices" className="nav-link">
-            County Services
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/events" className="nav-link">
-            Events
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/places" className="nav-link">
-            Historical sites
-          </Link>
-        </li>
-        {/* Add more links as needed */}
-      </ul>
-      <div className="kws__navbar-smallscreen">
-        <GiHamburgerMenu
-          color="white"
-          fontSize={25}
-          onClick={handleMobileMenuClick}
-        />
+    <div className="gpt3__navbar">
+      <div className="gpt3__navbar-links">
+        <div className="gpt3__navbar-links_logo">
+          {/*<img src={logo} alt="logo" />*/}
+        </div>
+        <div className="gpt3__navbar-links_container">
+          <Menu />
+        </div>
+      </div>
+      <div className="gpt3__navbar-sign">
+        <p>Sign in</p>
+        <button type='button'>Sign up</button>
+
+      </div>
+
+      <div className="gpt3__navbar-menu">
+        {toggleMenu
+        ? <RiCloseLine color='#fff' size ={28} onClick={() => setToggleMenu (false)} />
+        : <RiMenu3Line color='#fff' size ={28} onClick={() => setToggleMenu (true)} />
+
+        }
+        { /* Add mobile menu */}
 
         {toggleMenu && (
-          <div className="kws__navbar-smallscreen_overlay flex__center slide-bottom">
-            <MdOutlineRestaurantMenu
-              fontSize={27}
-              className="overlay__close"
-              onClick={handleMobileMenuClick}
-            />
-            <ul className="kws__navbar-smallscreen-links">
-              <li className="nav-item">
-                <Link to="/">Discover</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/search">Search</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/counties">Counties & Towns
-</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/cntyservices">County Services</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/contact">Event</Link>
-              </li>
-              <Link to="/places" className="nav-link">
-            Historical sites
-          </Link>
-              
-            </ul>
+          <div className="gpt3__navbar-menu_container scale-up-center">
+            <div className="gpt3__navbar-menu_container-links">
+              <Menu />
+              <div className="gpt3__navbar-menu_container-links-sign">
+        <p>Sign in</p>
+        <button type='button'>Sign up</button>
+
+      </div>
+
+
+            </div>
           </div>
         )}
-      </div>
-    </nav>
-  );
-};
+        
 
-export default Navigation;
+      </div>
+    </div>
+  )
+}
+export default Navigation

@@ -1,9 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+
 .gpt3__navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 6rem;
+  background: rgb(4, 69, 210);
+  
 }
+
+/* Remove bullets (dots) from the <p> elements */
+p {
+  margin: 0; 
+  padding: 0; 
+  list-style: none; 
+ 
+  
+}
+p a {
+  text-decoration: none;
+  color: aliceblue;
+  font-family: 'Patua One', cursive;
+  font-size: 18px;
+}
+
+a:hover{
+  color: pink;
+}
+
 
 .gpt3__navbar-links{
   flex: 1;
@@ -72,7 +97,7 @@
   align-items: flex-end;
   flex-direction: column;
   text-align: end;
-  background: var(--color-footer);
+  background: red;
   padding: 2rem;
   position: absolute;
   top: 40px;

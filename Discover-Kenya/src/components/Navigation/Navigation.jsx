@@ -1,6 +1,6 @@
 
 
-      import React, { useState } from 'react'
+      import  { useState } from 'react';
 
 import './navigation.css'
 
@@ -9,10 +9,12 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
  const Menu = () => (
   <>
 
+   
+
       <p><a href="#home">Home</a></p>
       <p><a href="#Innovations">Our Mission</a></p>
       <p><a href="#about">About</a></p>
-      <p><a href="#Internships">Services</a></p>
+      <p><a href="#Internships">Internships</a></p>
       <p><a href="#contact">Contact</a></p>
       <p><a href="#faq">FAQ</a></p>
       <p><a href="#search">Search</a></p>
@@ -45,8 +47,8 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
       <div className="gpt3__navbar-menu">
         {toggleMenu
-        ? <RiCloseLine color='#fff' size ={28} onClick={() => setToggleMenu (false)} />
-        : <RiMenu3Line color='#fff' size ={28} onClick={() => setToggleMenu (true)} />
+        ? <RiCloseLine color='blue' size ={28} onClick={() => setToggleMenu (false)} />
+        : <RiMenu3Line color='violet' size ={28} onClick={() => setToggleMenu (true)} />
 
         }
         { /* Add mobile menu */}
@@ -56,8 +58,8 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
             <div className="gpt3__navbar-menu_container-links">
               <Menu />
               <div className="gpt3__navbar-menu_container-links-sign">
-        <p>Sign in</p>
-        <button type='button'>Sign up</button>
+              <p>Sign in</p>
+              <button type='button'>Sign up</button>
 
       </div>
 

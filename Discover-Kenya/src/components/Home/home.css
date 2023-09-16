@@ -1,0 +1,74 @@
+/* Default styles for the Home component */
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+.header {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Patua One', cursive;
+    font-size: 24px;
+    font-weight: 800;
+    color: red;
+    
+  }
+  
+  .header p {
+    font-size: 18px;
+    font-family: 'Patua One', cursive;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  
+  .explore-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .explore-button:hover {
+    background-color: #e6462d;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .header {
+      padding: 80px 0; /* Adjust padding for smaller screens */
+    }
+  
+    .header h1 {
+      font-size: 28px; /* Adjust font size for smaller screens */
+    }
+  
+    .header p {
+      font-size: 16px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* Media query for larger screens */
+  @media screen and (min-width: 1200px) {
+    .header {
+      padding: 120px 0; /* Adjust padding for larger screens */
+    }
+  
+    .header h1 {
+      font-size: 48px; /* Adjust font size for larger screens */
+    }
+  
+    .header p {
+      font-size: 24px; /* Adjust font size for larger screens */
+    }
+  }
+  

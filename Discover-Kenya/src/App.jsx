@@ -9,7 +9,6 @@ const App = () => (
     <Navigation />
     <Home />
      <About />
-    
     <Search />
     <Internships />
     <Contacts />

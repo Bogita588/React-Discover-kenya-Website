@@ -6,7 +6,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 6rem;
-  background: rgb(4, 69, 210);
+  background: rgb(177,20,120);
+  background: linear-gradient(288deg, rgba(177,20,120,1) 0%, rgba(21,50,108,1) 0%);
+ 
   
 }
 

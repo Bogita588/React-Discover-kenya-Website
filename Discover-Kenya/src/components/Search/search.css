@@ -1,0 +1,100 @@
+/* Style for the whole search filter component */
+.search-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #f0f0f0; /* Background color for the whole component */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Rounded corners for the component */
+  }
+  
+  /* Style for the filter bar containing search inputs and button */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the content */
+    background-color: #fff; /* Background color for the filter bar */
+    border-radius: 4px; /* Rounded corners for the filter bar */
+    padding: 8px; /* Add padding for better spacing */
+  }
+  
+  /* Style for search input containers */
+  .search-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1; /* Occupy 100% width equally among search bars */
+    margin: 0 10px; /* Margin left and right for spacing */
+  }
+  
+  /* Style for search input fields */
+  .search-input input[type="text"] {
+    padding: 10px; /* Increase padding for larger size */
+    border: none; /* Remove the border */
+    border-bottom: 2px solid #007bff; /* Add a bottom border for the input */
+    outline: none;
+    width: 100%; /* Occupy 100% width of the container */
+    background-color: transparent; /* Transparent background */
+    font-size: 16px; /* Font size for the input */
+  }
+  
+  /* Style for the icons inside search inputs */
+  .search-input svg {
+    font-size: 24px; /* Increase the icon size */
+    margin-right: 10px; /* Add margin for spacing between icon and input */
+    color: #007bff; /* Icon color */
+  }
+  
+  /* Style for the 'x' clear icon */
+  .clear-icon {
+    cursor: pointer;
+    font-size: 18px; /* Increase the 'x' icon size */
+    color: #999; /* Icon color */
+  }
+  
+  /* Style for the search button */
+  button {
+    padding: 12px 24px; /* Increase padding for larger size */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px; /* Increase the button text size */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  /* Hover effect for the button */
+  button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  
+  /* Style for the filter options */
+  .filter-options label {
+    margin-right: 10px;
+    font-size: 16px; /* Increase the font size for the labels */
+  }
+  
+  /* Style for the select dropdowns */
+  .filter-options select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Increase the font size for the select options */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .filter-bar {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+  
+    .search-input {
+      margin: 10px 0; /* Add margin to separate search bars on smaller screens */
+    }
+  }
+  

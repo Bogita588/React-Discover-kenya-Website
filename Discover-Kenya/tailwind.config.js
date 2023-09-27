@@ -1,19 +1,24 @@
- 
-
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
-
-    "./index.html",
-    "./src/**/*.{js,jsx}",
+    
+    "./src/**/*.{html,js,jsx}"
   ],
   theme: {
-    extend: {
-      colors:{
-        "bluecolor": '#2a68ff',
-        'greyish': '#f1f4f8',
-        'cardShadow': '#f7f8f9',
-      }
-    },
+
+    colors: {
+      'blueColor': '#2563eb',
+      'white': '#ffffff',
+      'purple': '#3f3cbb',
+      'midnight': '#121063',
+      'metal': '#565584',
+      'tahiti': '#3ab7bf',
+      'Silver': '#ecebff',
+      'bubble-gum': '#ff77e9',
+      'bermuda': '#78dcca',
+    }
+    
   },
   plugins: [],
 }
+

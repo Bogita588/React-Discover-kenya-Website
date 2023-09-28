@@ -1,62 +1,146 @@
-import React from 'react';
+// Internship.js
+import React, { useState, useEffect } from 'react';
+import { FaBuilding, FaMapMarker, FaRegClock } from 'react-icons/fa';
 
-const internshipPositions = [
-  {
-    imageSrc: './java_programming.jpg', // Assuming the image is in the same folder
-    title: 'Java Programming Internship',
-    description: 'Join our team as a Java Programming intern and work on exciting projects.',
-  },
-  {
-    imageSrc: './web_design.jpg',
-    title: 'Web Design Internship',
-    description: 'Learn web design techniques and collaborate on real client projects.',
-  },
-  {
-    imageSrc: './marketing.jpg',
-    title: 'Marketing Internship',
-    description: 'Develop marketing strategies and promote innovative products.',
-  },
-  {
-    imageSrc: './data_analysis.jpg',
-    title: 'Data Analysis Internship',
-    description: 'Analyze data, generate insights, and contribute to data-driven decisions.',
-  },
-  {
-    imageSrc: './frontend_development.jpg',
-    title: 'Frontend Development Internship',
-    description: 'Create user-friendly interfaces and work with cutting-edge technologies.',
-  },
-  {
-    imageSrc: './graphic_design.jpg',
-    title: 'Graphic Design Internship',
-    description: 'Design visually appealing graphics and illustrations for various projects.',
-  },
-];
 
-function Internship() {
-  const handleApplyClick = () => {
-    // Implement the apply functionality, e.g., open an application form
+
+
+const Internship = ({ searchQuery, companyQuery, locationQuery, sortBy }) => {
+  // Sample job data (add more jobs as needed)
+  const jobsData = [
+    {
+      title: 'Software Developer Intern',
+      location: 'New York, NY',
+      company: 'TechCo Inc.',
+      timePosted: '2 days ago',
+      description:
+        'TechCo Inc. is seeking a software developer intern to join our team. This internship...',
+      duration: '6 months',
+      type: 'Fully On-Site',
+    },
+    {
+      title: 'Marketing Intern',
+      location: 'San Francisco, CA',
+      company: 'MarketingPro',
+      timePosted: '1 week ago',
+      description:
+        'MarketingPro is looking for a talented marketing intern to assist with various marketing campaigns...',
+      duration: '3 months',
+      type: 'Hybrid',
+    },
+    {
+      title: 'Software Developer Intern',
+      location: 'San Francisco, CA',
+      company: 'Tech Solutions Inc.',
+      timePosted: '1 day ago',
+      description:
+        'Tech Solutions Inc. is seeking a Software Developer Intern to join our innovative team. This internship offers hands-on experience in web and mobile application development using the latest technologies.',
+      duration: '3 months',
+      type: 'Fully Remote',
+    },
+    {
+      title: 'Software Engineering Intern',
+      location: 'New York, NY',
+      company: 'CodeCrafters Co.',
+      timePosted: '2 days ago',
+      description:
+        'CodeCrafters Co. is looking for a Software Engineering Intern to assist in the development of our cutting-edge software solutions. You will work closely with our engineering team and gain exposure to various programming languages and frameworks.',
+      duration: '6 months',
+      type: 'Hybrid',
+    },
+    {
+      title: 'Frontend Developer Intern',
+      location: 'Los Angeles, CA',
+      company: 'Web Wizards LLC',
+      timePosted: '3 days ago',
+      description:
+        'Web Wizards LLC is searching for a Frontend Developer Intern who is passionate about creating responsive and user-friendly web interfaces. This internship provides the opportunity to work on real client projects and enhance your frontend development skills.',
+      duration: '4 months',
+      type: 'Fully On-Site',
+    },
+    {
+      title: 'Software Development Internship',
+      location: 'Chicago, IL',
+      company: 'Tech Innovators Corp.',
+      timePosted: '4 days ago',
+      description:
+        'Tech Innovators Corp. invites Software Development Internship applicants to join our team. You will have the chance to collaborate on exciting projects, develop software applications, and gain practical experience in the software development industry.',
+      duration: '3 months',
+      type: 'Fully Remote',
+    },
+    {
+      title: 'Backend Developer Intern',
+      location: 'Boston, MA',
+      company: 'DataDriven Solutions Ltd.',
+      timePosted: '5 days ago',
+      description:
+        'DataDriven Solutions Ltd. is seeking a Backend Developer Intern who will work on building robust server-side applications and optimizing data processes. This internship offers the opportunity to work with data engineers and backend developers on challenging projects.',
+      duration: '6 months',
+      type: 'Hybrid',
+    },
+  ];
+  
+  // Function to sort jobs based on the selected criteria
+  const sortJobs = (jobs, sortBy) => {
+    // Implement sorting logic here based on the `sortBy` parameter
+    // Return the sorted job array
+    return jobs;
   };
 
+  // Filter and sort job listings based on filter criteria and selected sort criteria
+  const [filteredAndSortedJobs, setFilteredAndSortedJobs] = useState([]);
+
+  useEffect(() => {
+    const filteredJobs = jobsData.filter((job) => {
+      return (
+        job.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        job.company.toLowerCase().includes(companyQuery.toLowerCase()) &&
+        job.location.toLowerCase().includes(locationQuery.toLowerCase())
+      );
+    });
+
+    const sortedJobs = sortJobs(filteredJobs, sortBy);
+
+    setFilteredAndSortedJobs(sortedJobs);
+  }, [searchQuery, companyQuery, locationQuery, sortBy]);
+
   return (
-    <div className="internship-list">
-      <h1>Internship Positions</h1>
-      <div className="internship-grid">
-        {internshipPositions.map((position, index) => (
-          <div className="internship-card" key={index}>
-            <img src={position.imageSrc} alt={position.title} className="internship-image" />
-            <div className="internship-details">
-              <h3 className="internship-title">{position.title}</h3>
-              <p className="internship-description">{position.description}</p>
-              <button className="apply-button" onClick={handleApplyClick}>
-                Apply
-              </button>
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="internships">
+      {filteredAndSortedJobs.map((job, index) => (
+        <div
+          key={index}
+          className="bg-white p-4 rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300 flex flex-col justify-center items-center"
+        >
+          <h2 className="text-lg font-semibold mb-2">{job.title}</h2>
+          <div className="flex items-center text-gray-500 text-sm mb-2">
+            <FaMapMarker className="mr-1" />
+            {job.location}
           </div>
-        ))}
-      </div>
+          <div className="flex items-center text-gray-500 text-sm mb-2">
+            <FaBuilding className="mr-1" />
+            {job.company}
+          </div>
+          <div className="flex items-center text-gray-500 text-sm mb-2">
+            <FaRegClock className="mr-1" />
+            {job.timePosted}
+          </div>
+          <div className="flex items-center text-gray-500 text-sm mb-2">
+            <span className="mr-1">Duration:</span>
+            {job.duration}
+          </div>
+          <div className="flex items-center text-gray-500 text-sm mb-2">
+            <span className="mr-1">Type:</span>
+            {job.type}
+          </div>
+          <hr className="w-full border-t border-gray-200 my-2" />
+          <p className="text-sm text-gray-700 my-2 text-center">{job.description}</p>
+          <button className="bg-blueColor text-white px-4 py-2 rounded-md hover:bg-purple transition-colors duration-300">
+            Apply
+          </button>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 export default Internship;

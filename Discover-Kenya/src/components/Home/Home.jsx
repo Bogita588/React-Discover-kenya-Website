@@ -28,7 +28,7 @@ const Home = () => {
   }, []);
 
   return (
-    <header className="header" style={{ backgroundImage: `url(${backgroundImages[backgroundIndex]})` }}>
+    <header className="header" style={{ backgroundImage: `url(${backgroundImages[backgroundIndex]})` }} id="home">
       <div className="header-content">
         <h1>Welcome to InternKenya, a Hub of opportunities for Students!</h1>
         <p>Your Premier Destination for Internship and Attachment Opportunities</p>

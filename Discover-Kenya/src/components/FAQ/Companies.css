@@ -1,0 +1,59 @@
+body {
+    overflow-x: hidden;
+  }
+.partner-companies {
+    text-align: center;
+    padding: 20px;
+    background: rgb(177,20,120);
+    background: linear-gradient(288deg, rgba(177,20,120,1) 0%, rgba(165,171,191,1) 0%);
+    
+  }
+  .h2{
+    font-size: x-large;
+    font-weight: 900;
+  }
+  
+  .partner-description {
+    margin-bottom: 20px;
+    font-size: larger;
+    font-weight: 500;
+  }
+  
+  .partner-description p {
+    font-size: 16px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .partner-logo {
+      width: calc(50% - 10px); 
+      max-width: 100px;
+      height: auto;
+      margin-left: 5px; 
+      margin-right: 5px; 
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  @media (min-width: 769px) {
+    .partner-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 20px;
+      justify-content: center;
+    }
+  
+    .partner-logo {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+    }
+  }
+  

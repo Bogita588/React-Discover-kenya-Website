@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 
-import { About, Faq, Footer, Innovations, Internships, Navigation, Search, Contacts, Home } from './components';
+
+import { About, Faq, Footer, Innovations, Register, Internships, Navigation, Search, Contacts, Home } from './components';
 import './App.css';
 
 function App() {
@@ -17,17 +18,21 @@ function App() {
   const handleSearch = (searchFilters) => {
     setSearchData(searchFilters);
   };
+  
+ 
+    
 
 return (
   <div>
-    <Navigation />
+    <Navigation  />
     <Home />
 
     
-      {/* Render the Search component and pass the handleSearch function as a prop */}
+      
       <Search onSearch={handleSearch} />
+      
 
-      {/* Render the Internship component and pass searchData as props */}
+     
       <Internships
         searchQuery={searchData.searchQuery}
         companyQuery={searchData.companyQuery}
@@ -35,8 +40,9 @@ return (
         sortBy={searchData.sortBy}
       />
      <About />
-
+    <Register />
     <Contacts />
+    
     <Innovations />
     <Faq />
     <Footer />

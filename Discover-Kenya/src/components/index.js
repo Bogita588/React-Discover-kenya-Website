@@ -7,6 +7,7 @@ import Innovations from './Innovations/Innovation';
 import Internships from './Internships/Internship';
 import Search from './Search/Search';
 import Footer from './Footer/Footer';
+import Register from './Register/Register';
 
 
 
@@ -21,6 +22,7 @@ export {
     Search,
     Footer,
     Home,
+    Register
 
 
   

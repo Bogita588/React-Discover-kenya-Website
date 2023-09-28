@@ -28,6 +28,7 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
  const Navigation = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+ 
 
   return (
     <div className="gpt3__navbar">
@@ -41,7 +42,7 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
       </div>
       <div className="gpt3__navbar-sign">
         <p>Sign in</p>
-        <button type='button'>Sign up</button>
+        <p><button type='button'>Sign up</button></p>
 
       </div>
 

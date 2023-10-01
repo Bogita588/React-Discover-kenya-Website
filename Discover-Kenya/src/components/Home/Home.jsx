@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 import './home.css';
-import Nairobi1 from './Nairobi1.jpeg'; // Import the images correctly
-import Nairobi3 from './Nairobi3.jpeg';
-import Nyamira1 from './Nyamira1.jpg';
-import eagle from './eagle.jpg';
-import light from './light.jpg';
+
+
+import intern from './intern.jpg'
 
 const Home = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
 
-  const backgroundImages = [Nairobi1, eagle, light, Nairobi3, Nyamira1]; // Use the imported variables
+  const backgroundImages = [ intern]; // Use the imported variables
 
   useEffect(() => {
     // Function to cycle through background images
@@ -30,7 +28,7 @@ const Home = () => {
   return (
     <header className="header" style={{ backgroundImage: `url(${backgroundImages[backgroundIndex]})` }} id="home">
       <div className="header-content">
-        <h1>Welcome to InternKenya, a Hub of opportunities for Students!</h1>
+        <h1>Welcome to InternKenya, a Hub of opportunities for Graduates & Students!</h1>
         <p>Your Premier Destination for Internship and Attachment Opportunities</p>
         <a href="#internships" className="explore-button">Explore Internships</a>
       </div>

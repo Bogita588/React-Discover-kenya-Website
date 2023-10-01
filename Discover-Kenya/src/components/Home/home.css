@@ -17,7 +17,7 @@
     font-family: sans-serif;
     
     font-weight: 800;
-    color: black;
+    color: purple;
     
   }
   
@@ -26,6 +26,7 @@
     font-family: 'Patua One', cursive;
     font-weight: 300;
     margin-bottom: 30px;
+    color: rgb(192, 184, 186);
   }
   
   .explore-button {

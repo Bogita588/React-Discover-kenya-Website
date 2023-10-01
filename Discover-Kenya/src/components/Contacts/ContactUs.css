@@ -3,15 +3,25 @@
 
 .contact-container {
   
-    margin-top: 50px;
-    font-family: 'Patua One', cursive;
-    
+  margin-top: 50px;
+  font-family: 'Patua One', cursive;
+  
 
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text within the container */
+display: flex;
+flex-direction: column;
+align-items: center; 
+text-align: center; 
 }
+
+
+ 
+  .title {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: white;
+    background: red;
+  }
 
 /* Style for the contact form */
 .contact-form {

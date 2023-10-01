@@ -80,14 +80,13 @@ const Internship = ({ searchQuery, companyQuery, locationQuery, sortBy }) => {
     },
   ];
   
-  // Function to sort jobs based on the selected criteria
+  
   const sortJobs = (jobs, sortBy) => {
-    // Implement sorting logic here based on the `sortBy` parameter
-    // Return the sorted job array
+   
     return jobs;
   };
 
-  // Filter and sort job listings based on filter criteria and selected sort criteria
+  
   const [filteredAndSortedJobs, setFilteredAndSortedJobs] = useState([]);
 
   useEffect(() => {
@@ -109,9 +108,9 @@ const Internship = ({ searchQuery, companyQuery, locationQuery, sortBy }) => {
       {filteredAndSortedJobs.map((job, index) => (
         <div
           key={index}
-          className="bg-white p-4 rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300 flex flex-col justify-center items-center"
+          className="bg-white p-4 rounded-lg shadow-md hover:bg-Silver -100 transition-colors duration-300 flex flex-col justify-center items-center"
         >
-          <h2 className="text-lg font-semibold mb-2">{job.title}</h2>
+          <h2 className="text-lg text-purple font-semibold mb-2">{job.title}</h2>
           <div className="flex items-center text-gray-500 text-sm mb-2">
             <FaMapMarker className="mr-1" />
             {job.location}

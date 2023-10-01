@@ -1,7 +1,9 @@
 
 
   @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
-
+*{
+  overflow-x: hidden;
+}
 .about-us {
     text-align: center;
     font-family: 'Patua One', cursive;
@@ -13,7 +15,7 @@
   
   .about-us-title {
     font-size: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 20px;
     color: white;
   }

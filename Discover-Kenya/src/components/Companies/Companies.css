@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
 body {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
+}
 .partner-companies {
-    text-align: center;
-    padding: 20px;
-    background: rgb(177,20,120);
-    background: linear-gradient(288deg, rgba(177,20,120,1) 0%, rgba(165,171,191,1) 0%);
-    
-  }
-  .h2{
-    font-size: x-large;
-    font-weight: 900;
-  }
+  text-align: center;
+  padding: 20px;
+  background: rgb(177,20,120);
+  background: linear-gradient(288deg, rgba(177,20,120,1) 0%, rgba(165,171,191,1) 0%);
+
+}
+.title{
+  font-size: x-large;
+  font-weight: 700;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+  
+}
   
   .partner-description {
     margin-bottom: 20px;
@@ -20,7 +27,9 @@ body {
   }
   
   .partner-description p {
-    font-size: 16px;
+    font-size: 26px;
+    font-weight: 700;
+    
   }
   
   

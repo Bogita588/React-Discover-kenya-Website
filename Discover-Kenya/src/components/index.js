@@ -1,6 +1,6 @@
 import About from './About/About'
 import Contacts from './Contacts/contacts';
-import Faq from './FAQ/Faq';
+import Companies from './Companies/Companies';
 import Home from './Home/Home';
 import Navigation from './Navigation/Navigation';
 import Innovations from './Innovations/Innovation';
@@ -15,7 +15,7 @@ import Register from './Register/Register';
 export {
     About,
     Contacts,
-    Faq,
+    Companies,
     Navigation,
     Innovations,
     Internships,

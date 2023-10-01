@@ -12,8 +12,8 @@ const partnerLogos = [logo1, logo2,kra,deloitte, safaricom,kra,deloitte, safaric
 
 const PartnerCompanies = () => {
   return (
-    <div className="partner-companies">
-      <h2>Our Partner Companies</h2>
+    <div className="partner-companies" id="companies">
+      <h2 className="title">Patner Companies</h2>
       <div className="partner-description">
         <p>
           We have partnered with top companies and Institutions to make it easy for students

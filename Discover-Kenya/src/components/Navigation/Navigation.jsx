@@ -12,13 +12,13 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
    
 
       <p><a href="#home">Home</a></p>
-      <p><a href="#innovations">Our Mission</a></p>
+      
       <p><a href="#about">About</a></p>
       <p><a href="#internships">Internships</a></p>
       <p><a href="#contact">Contact</a></p>
-      <p><a href="#faq">FAQ</a></p>
+      <p><a href="#companies">Companies</a></p>
       <p><a href="#search">Search</a></p>
-      <p><a href="#footer">Footer</a></p>
+      
 
       
   

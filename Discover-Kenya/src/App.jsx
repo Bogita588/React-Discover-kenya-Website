@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 
-import { About, Faq, Footer, Innovations, Register, Internships, Navigation, Search, Contacts, Home } from './components';
+import { About, Companies, Footer, Innovations, Internships, Navigation, Search, Contacts, Home } from './components';
 import './App.css';
 
 function App() {
@@ -27,12 +27,9 @@ return (
     <Navigation  />
     <Home />
 
-    
-      
-      <Search onSearch={handleSearch} />
-      
 
-     
+      <Search onSearch={handleSearch} />
+
       <Internships
         searchQuery={searchData.searchQuery}
         companyQuery={searchData.companyQuery}
@@ -40,11 +37,12 @@ return (
         sortBy={searchData.sortBy}
       />
      <About />
-    <Register />
+    {/*<Register /> */}
     <Contacts />
+    <Companies />
     
-    <Innovations />
-    <Faq />
+    {/*<Innovations />*/}
+    
     <Footer />
 
    

@@ -32,7 +32,7 @@ const Home = () => {
       <div className="header-content">
         <h1>Welcome to InternKenya, a Hub of opportunities for Students!</h1>
         <p>Your Premier Destination for Internship and Attachment Opportunities</p>
-        <a href="#explore" className="explore-button">Explore Internships</a>
+        <a href="#internships" className="explore-button">Explore Internships</a>
       </div>
     </header>
   );

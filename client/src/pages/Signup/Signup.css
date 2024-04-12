@@ -1,0 +1,86 @@
+/* Signup.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-header h4 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.form-header span {
+    display: block;
+    color: #777;
+}
+
+.form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.column input, .column .file-upload {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px; 
+    border-radius: 8px; 
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.column input::placeholder, .column .file-upload::placeholder {
+    font-size: 1rem;
+}
+
+.register-button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-button button {
+    width: 50%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-button button:hover {
+    background-color: #0056b3;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .form-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .register-button button {
+        width: 100%;
+    }
+}

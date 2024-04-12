@@ -1,0 +1,82 @@
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,2,55,1) 17%, rgba(9,9,121,1) 68%, rgba(8,8,112,1) 69%, rgba(0,212,255,1) 100%);
+  font-family: 'Patua One', cursive;
+  color: #fff;
+  width: 100%; 
+  height: 80px;
+  font-size: 20px; 
+  
+  
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Styling for Login and Register buttons */
+.navbar__right button {
+  background: orangered;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar__left {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .mobile-menu__link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}

@@ -49,6 +49,10 @@
 .column input::placeholder, .column .file-upload::placeholder {
     font-size: 1rem;
 }
+.error-message {
+    display: none;
+}
+
 
 .register-button {
     text-align: center;
